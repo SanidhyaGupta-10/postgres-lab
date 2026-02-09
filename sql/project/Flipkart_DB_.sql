@@ -63,4 +63,4 @@ SELECT * FROM Flipkart_DB LIMIT 5; -- it will return only first 5 records
 
 SELECT product_name as name, price as product_price FROM Flipkart_DB; -- it will return product_name as name and price as product_price
 
-SELECT DISTINCT category from Flipkart_DB;
+SELECT DISTINCT category from Flipkart_DB; -- DISTINCT will return unique categories from the Flipkart_DB table
