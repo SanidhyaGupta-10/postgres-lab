@@ -14,8 +14,6 @@ WHERE is_available = TRUE AND stock > 50 and price != 200.99; -- it will return 
 SELECT category, MAX(price) AS MAX_PRICE FROM Flipkart_DB GROUP BY category; -- it will return the category and maximum price of products in each category in the Flipkart_DB table
 
 
-
-
 SELECT DISTINCT Upper(category) as category_upper FROM Flipkart_DB
 order by category_upper DESC; -- it will return the distinct categories in uppercase and order them in descending order in the Flipkart_DB table
 
