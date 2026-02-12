@@ -2,8 +2,7 @@
 
 CREATE TABLE students (
     id INT PRIMARY KEY,
-    name VARCHAR(50),
-    age INT
+    name VARCHAR(50)
 );
 INSERT INTO students (id, name) 
 
