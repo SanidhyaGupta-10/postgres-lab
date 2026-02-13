@@ -14,7 +14,9 @@ CREATE TABLE people_marks (
 INSERT INTO people (name) 
 VALUES ('Alice'),
        ('Bob'),
-       ('Charlie');
+       ('Charlie'),
+    
+INSERT INTO people (name) VALUES ('David'), ('Eve');
 
 INSERT INTO people_marks (student_id, subject, marks)
 VALUES 
@@ -25,8 +27,13 @@ VALUES
          (3, 'Math', 92),
          (3, 'Science', 88);
 
-SELECT * FROM people
-JOIN people_marks ON people.id = people_marks.student_id; -- Joining people and people_marks to get combined information about students and their marks
+SELECT people.name, people_marks.subject, people_marks.marks 
+FROM people
+LEFT JOIN people_marks ON people.id = people_marks.student_id; -- This query retrieves all people and their corresponding marks, showing NULL for subjects and marks where there is no entry in people_marks (e.g., for David and Eve).
+
+-- How Left Join works:
+-- The LEFT JOIN returns all records from the left table (people), and the matched records from
 
 
 
+SELECT * FROM people;
