@@ -25,6 +25,8 @@ VALUES
          (3, 'Math', 92),
          (3, 'Science', 88);
 
-SELECT * FROM people;
+SELECT * FROM people
+JOIN people_marks ON people.id = people_marks.student_id; -- Joining people and people_marks to get combined information about students and their marks
 
-SELECT * FROM people_marks;
+
+
