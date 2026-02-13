@@ -34,6 +34,8 @@ LEFT JOIN people_marks ON people.id = people_marks.student_id; -- This query ret
 -- How Left Join works:
 -- The LEFT JOIN returns all records from the left table (people), and the matched records from
 
-
+SELECT people.name, people_marks.subject, people_marks.marks 
+FROM people
+RIGHT JOIN people_marks ON people.id = people_marks.student_id; -- This query retrieves all marks and their corresponding people, showing NULL for names where there is no entry in people (e.g., if there were marks without a corresponding person).
 
 SELECT * FROM people;
